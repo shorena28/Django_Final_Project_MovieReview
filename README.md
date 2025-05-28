@@ -37,7 +37,7 @@ Movie_Reviews/
 
 1. 📦 Clone the Repository
 
-git clone https://github.com/your-username/movie-reviews.git
+git clone https://github.com/shorena28/Django_Final_Project_MovieReview
 cd movie-reviews
 2. 🐍 Set Up a Virtual Environment (Recommended)
 
