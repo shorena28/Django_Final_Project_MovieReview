@@ -61,3 +61,17 @@ def add_review(request, movie_id):
     else:
         form = ReviewForm()
     return render(request, 'movies_app/review_form.html', {'form': form, 'movie': movie})
+
+from .models import Genre, Watchlist
+
+def genre_list(request):
+    genres = Genre.objects.all()
+    return render(request, 'movies_app/genre_list.html', {'genres': genres})
+
+def review_list(request):
+    reviews = Review.objects.all()
+    return render(request, 'movies_app/review_list.html', {'reviews': reviews})
+
+def watchlist_list(request):
+    watchlists = Watchlist.objects.all()
+    return render(request, 'movies_app/watchlist_list.html', {'watchlists': watchlists})

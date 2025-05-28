@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Watchlists{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">📋 Watchlists</h1>
+<div class="list-group">
+  {% for watchlist in watchlists %}
+    <div class="list-group-item">
+      <strong>{{ watchlist.user.username }}</strong> saved <em>{{ watchlist.movie.title }}</em>
+    </div>
+  {% empty %}
+    <p>No watchlists found.</p>
+  {% endfor %}
+</div>
+{% endblock %}

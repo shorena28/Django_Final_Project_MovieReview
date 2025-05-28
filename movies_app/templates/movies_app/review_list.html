@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Reviews{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">📝 Reviews</h1>
+<div class="list-group">
+  {% for review in reviews %}
+    <div class="list-group-item">
+      <h5 class="mb-1">{{ review.movie.title }}</h5>
+      <p class="mb-1">{{ review.text }}</p>
+      <small>By {{ review.reviewer.username }} on {{ review.created_at|date:"M d, Y" }}</small>
+    </div>
+  {% empty %}
+    <p>No reviews found.</p>
+  {% endfor %}
+</div>
+{% endblock %}
